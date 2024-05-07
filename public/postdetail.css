@@ -1,0 +1,7 @@
+.post {
+    width: 800px;
+    border: 2px solid rgb(58,31,49);
+    padding: 2rem;
+    background-color: wheat;
+    margin-top: auto;
+}

@@ -13,10 +13,16 @@
     <nav class = "navigation">
         <h1>Mon Blog</h1>
         <ul>
+            <% if (!locals.connected){ %>
             <li><a href="/user/signup">Inscription</a></li>
             <li><a href="/user/login">Connexion</a></li>
-            <li><form action="/user/logout" method="post">
-                <button type="submit">Déconnexion</button>
-            </form></li>
+            <%}%>
+            <% if(locals.connected) { %>
+                <li><a href="/post/add">Ajouter</a></li>
+                <li><form action="/user/logout" method="post">
+                    <button type="submit">Déconnexion</button>
+                </form></li>
+            <% } %>
+
         </ul>
     </nav>

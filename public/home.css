@@ -1,0 +1,14 @@
+.posts {
+    width: 700px;
+    margin: 2rem auto;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.post {
+    border: 2px solid rgb(58,31,49);
+    padding: 2rem;
+    background-color: wheat;
+}

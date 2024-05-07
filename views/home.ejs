@@ -1,0 +1,22 @@
+<%- include("./partials/header", {title : "Page d'accueil", style: "home"}) %>
+
+<% if(locals.connected){ %>
+    <h1>Bonjour <%= locals.user.username %></h1>
+<%} else { %>
+    <h1>Bonjour Inconnu</h1>
+    <% } %>
+
+    <main>
+        <% if(locals.posts){ %>
+            <div class="posts">
+                <% posts.forEach(post => { %>
+                    <div class="post">
+                        <h3><%= post.title  %></h3>
+                        <p><%= post.content.substring(0,100).concat("...") %></p>
+                        <button><a href="/post/detail/<%= post.id %>">Lire la suite</a></button>
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
+    </main>
+<%- include("./partials/footer") %>

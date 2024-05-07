@@ -1,0 +1,11 @@
+
+<%- include("../partials/header.ejs", {title : "Ajouter un article", style : "postdetail"}) %>
+
+<% if(locals.post){ %>
+        <div class="post">
+            <h3><%= post.title  %> Auteur : <% post.user.username %></h3>
+            <p><%= post.content %></p>
+        </div>
+<% } %>
+<%-  include("../partials/footer.ejs") %>
+

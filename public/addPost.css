@@ -1,0 +1,17 @@
+.form{
+    border: 2px solid gold;
+    padding: 2rem;
+    width: 500px;
+    margin: 1rem auto;
+
+}
+
+.form input, .form textarea{
+    width: 100%;
+
+}
+
+.form label{
+    display: block;
+    text-align: center;
+}
