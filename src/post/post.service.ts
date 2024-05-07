@@ -23,8 +23,7 @@ export class PostService {
              where : {id : +id},
              relations : {user: true},
             })
-        if(!post)
-        throw new NotFoundException("L'article n'existe pas")
+        if(!post) throw new NotFoundException("L'article n'existe pas")
         return post
     }
 }
